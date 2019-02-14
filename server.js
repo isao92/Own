@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const path = require('path');
 const jwt = require('jsonwebtoken');
@@ -7,6 +8,7 @@ const morgan = require('morgan'); // used to see requests
 const app = express();
 const db = require('./models');
 const PORT = process.env.PORT || 3001;
+
 
 // Setting CORS so that any website can
 // Access our API
@@ -29,7 +31,7 @@ mongoose.set('useCreateIndex', true);
 
 // Init the express-jwt middleware
 const isAuthenticated = exjwt({
-  secret: 'all sorts of code up in here'
+  secret: process.env.SERVER_SECRET
 });
 
 
@@ -40,7 +42,7 @@ app.post('/api/login', (req, res) => {
   }).then(user => {
     user.verifyPassword(req.body.password, (err, isMatch) => {
       if(isMatch && !err) {
-        let token = jwt.sign({ id: user._id, email: user.email }, 'all sorts of code up in here', { expiresIn: 129600 }); // Sigining the token
+        let token = jwt.sign({ id: user._id, email: user.email }, process.env.SERVER_SECRET, { expiresIn: 129600 }); // Sigining the token
         res.json({success: true, message: "Token Issued!", token: token, user: user});
       } else {
         res.status(401).json({success: false, message: "Authentication failed. Wrong password."});
