@@ -97,33 +97,32 @@ app.use(function (err, req, res, next) {
 // Code to seed projects collection
 const projectsSeed = [
   {
-      first_name: "Mushrooms",
-      last_name: "You Me",
-      description: 'Using the MERN structure, this application allows you to browse through the local mushroom store "You Me Mushrooms" as a user learn about the store. As a farmer/admin you can enter mushroom batch information into the database and retrieve it, it also allows you to access a calendar and a mushroom collection.',
-      technologies_used: "This project was done using React.js, Node.js, Robo 3T, MongoDB, Axios, JSON Web Token, Express, Morgan, React Event Listener, Postman, Google Material-UI, Model-View-Controller Paradigm, Heroku, mLab, Javascript, JSX, jQuery, Bootstrap 4, CSS3, Google Fonts, PowerShell, Bash GNU, Google Chrome and Adobe Photoshop CC 2018.",
+      first_name: "Yamaha",
+      last_name: "Drums",
+      description: 'Mint condition drums.',
+      technologies_used: "Available Mon-Sat from 4pm to 10pm",
       imageUrl: "https://lh3.google.com/u/0/d/1p_WhPbxdRHFT6W9mA0N1MTGuMu2b6Y1w=w3000-h5331-iv1",
       projectURL: "https://project3-full-stack-react.herokuapp.com/",
-      spacingForProject: "150px"
+      spacingForProject: "Rock and Roll"
   },
   {
-      first_name: "The Jam?",
-      last_name: "Where's",
-      description: "Using Eventbrite’s, Last.fm and Ebay APIs this application provides a short summary of the artist, any related upcoming events and merchandise available. All you have to do is to type in the name of your favorite artist and browse.",
-      technologies_used: "Technologies used for this project are Javascript, HTML5, CSS, Bootstrap, Adobe Illustrator and Ajax.",
+      first_name: "Fender",
+      last_name: "Stratocaster electric guitar",
+      description: "Heavily used but still in good conditions",
+      technologies_used: "Available all week",
       imageUrl: "https://lh4.googleusercontent.com/upztoUZE2sQuOfh9KopQ2hNeBxqNuelL3qVEERHRW1IEcEg5AX3qn48S9_zAkiAQah7Nwe3sbVKVl1Z7Ssgx=w1920-h937-rw",
-      // description: "I have an electro-acoustic Martin & Co. Guitar"
       projectURL: "https://isao92.github.io/project-one/",
-      spacingForProject: "580px"
+      spacingForProject: "R&B"
   },
   {
-      first_name: "Book Log",
-      last_name: "React",
-      description: "This application allows you to enter a book and store it in the database.",
+      first_name: "Mastering",
+      last_name: "Mixing",
+      description: "5 years experience mixing and mastering",
       technologies_used: "The Application uses React, Express, Bootstrap and Mongoose.",
       imageUrl: "https://lh3.googleusercontent.com/3sex5ppvkdSXnSe3JFuOLfTR9xvvV6QlBcxRdW9gTv5fczWQSYZhcF5u24HaOC-zFy3RKLVeu0DeJUoHJpa9=w1920-h937-rw",
       // description: "I have a little sound prof garage available"
       projectURL: "https://react-cbc.herokuapp.com/",
-      spacingForProject: "995px"
+      spacingForProject: "Hip-Hop, Rock and Jazz"
   },
   {
       first_name: "Online",
