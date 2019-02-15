@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // after || line should change to the one on mlab
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://user:password1@ds135305.mlab.com:35305/heroku_8vgb4rkm', {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://isao92:horsetama&rindoarigato1@ds137255.mlab.com:37255/heroku_wqt2njh4', {useNewUrlParser: true});
 mongoose.set('useCreateIndex', true);
 
 // Init the express-jwt middleware
