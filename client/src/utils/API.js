@@ -23,14 +23,14 @@ export default {
     return axios.delete(`/api/projects/${id}`)
   },
 
-  // get all batch documents as array of objects
-  getAllBatch: () => {
-    return axios.get(`/api/batch`);
-  },
+  // // get all projects documents as array of objects
+  // getAllProjects: () => {
+  //   return axios.get(`/api/projects`);
+  // },
 
-  // start a new batch document (use on Admin page) projects inside parenthesis
-  startBatch: (batchNum, bagNum, projects, bagSize) => {
+  // start a new projects document (use on Admin page) projects inside parenthesis
+  startProjects: (first_name, last_name, description, technologies_used, imageUrl, projectURL, spacingForProject) => {
     // projects: projects
-    return axios.post('api/batch', {batchNum: batchNum, bagNum: bagNum, projects: projects, bagSize: bagSize}); 
+    return axios.post('api/projects', {first_name: first_name, last_name: last_name, description: description, technologies_used: technologies_used, imageUrl: imageUrl, projectURL: projectURL, spacingForProject: spacingForProject,}); 
   }
 };
