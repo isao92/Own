@@ -116,7 +116,7 @@ class ProjectsPage extends Component {
                         
                         <Grid item xs={6} >
                           
-                            <Paper style={{marginTop: this.state.spacingForProjects}} className="projects-description-card" id="projects-dcard-mobile" >
+                            <Paper className="projects-description-card" id="projects-dcard-mobile" >
                                
                               <div className="description-project-generated">
                                   {this.state.description}
