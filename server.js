@@ -90,16 +90,11 @@ app.use(function (err, req, res, next) {
   }
 });
 
-// mushrooms image
-// https://lh3.google.com/u/0/d/1p_WhPbxdRHFT6W9mA0N1MTGuMu2b6Y1w=w1094-h819-iv1
-
-// the jam image
-// https://lh3.google.com/u/0/d/1s5eswGAFf2TNd8Wy4w2SvNmF1zo7IPVG=w1433-h855-iv1
 
 // Code to seed projects collection
 const projectsSeed = [
   {
-      first_name: "Yamaha",
+      first_name: "Test123",
       last_name: "Drums",
       description: 'Mint condition drums.',
       technologies_used: "Available Mon-Sat from 4pm to 10pm",
@@ -201,33 +196,33 @@ app.delete("/api/projects/:id", (req, res) =>{
 }),
 
 
-// get json of all documents in Batch collection
-app.get("/api/batch", (req, res) => {
-  db.Batch
+// get json of all documents in publicUserInfo collection
+app.get("/api/publicUserInfo", (req, res) => {
+  db.publicUserInfo
     .find({})
     .then(datafoo => res.json(datafoo))
     .catch(err => res.status(400).json(err));
 });
 
-// create new BATCH document
-app.post("/api/batch", (req, res) => {
-  db.Batch
+// create new publicUserInfo document
+app.post("/api/publicUserInfo", (req, res) => {
+  db.publicUserInfo
     .create(req.body)
     .then(datafoo => res.json(datafoo))
     .catch(err => res.status(400).json(err));
 });
 
-// update a document in BATCH collection using its id
-app.put("/api/batch/:id", (req, res) =>{
-  db.Batch
+// update a document in publicUserInfo collection using its id
+app.put("/api/publicUserInfo/:id", (req, res) =>{
+  db.publicUserInfo
   .findOneAndUpdate({_id: req.params.id}, req.body)
   .then(datafoo => res.json(datafoo))
   .catch(err => res.status(422).json(err));
 }),
 
-// delete a record in BATCH collection using its id
-app.delete("/api/batch/:id", (req, res) =>{
-  db.Batch
+// delete a record in publicUserInfo collection using its id
+app.delete("/api/publicUserInfo/:id", (req, res) =>{
+  db.publicUserInfo
   .findById({_id: req.params.id})
   .then(datafoo=>datafoo.remove())
   .then(datafoo => res.json(datafoo))
